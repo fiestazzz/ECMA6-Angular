@@ -37,13 +37,27 @@ const numeriPerDueUnParametro = num.map( numero => {  //si possono omettere le p
 const numeriPerDueNoGraffe = num.map( numero => numero*2 )  //si possono omettere le parentesi tonde nel passaggio di variabili e le graffe prima delle istruzioni 
 
 
-console.log(numeriPerDueDichaiaritvi);
-console.log(numeriPerDue);               // danno tutte lo stesso risultato 
-console.log(numeriPerDueUnParametro);
-console.log(numeriPerDueNoGraffe);
+//console.log(numeriPerDueDichaiaritvi);
+//console.log(numeriPerDue);               // danno tutte lo stesso risultato 
+//console.log(numeriPerDueUnParametro);
+//console.log(numeriPerDueNoGraffe);
 
 
 
 
 const dispari= numeriPerDueNoGraffe.filter(n => n%2 !== 0);
 console.log(dispari);
+
+
+////funzione di ordine superiore
+const parole =['latte' , 'casa' , 'Mario' , 'mela'];
+
+const findWord = (word) => {                      //può anche essere scritta
+    return (item) => item === word;               // const findWord = word => item => item === word
+}
+//parole.filter((item)=> item === 'mela' );    funzione cerca mela che ci limita a cercare solo la parola mela
+
+//parole.filter(findWord('mela')); //funzione di ordine superiore che ci permette di variare la variabile passata da cercare
+const result = parole.filter(findWord('mela'));
+console.log(result);
+
