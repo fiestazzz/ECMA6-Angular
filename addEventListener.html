@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event listener</title>
+    <style>
+        #quadrato
+        {
+            background-color: aqua;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            color: white;
+            
+        }
+        #rettangolo{
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            top: 200px;
+            left: 0;
+            background-color: indigo;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="quadrato" style="border: 3px solid red">
+        <p>quadrato</p>
+    </div>
+    <div id="rettangolo">
+        <p>Rettangolo</p>
+    </div>
+    <button id="avantiBtn">Avanti</button>
+    <script>
+        const quadrato = document.querySelector("#quadrato");
+        const rettangolo =document.querySelector("#rettangolo");
+        const avantiBtn= document.querySelector("#avantiBtn");  
+        
+        function vaiAvanti(event)
+        {
+            console.log("altKey is " , event.altKey);
+            console.log("type" , event.type);
+            console.log("target" , event.target);
+            quadrato.style.left = "100px";
+            quadrato.style.height="200px";
+            quadrato.style.width= "200px";
+            quadrato.innerHTML = "<h1>Mi sono spostato</h1>";
+        }
+        avantiBtn.addEventListener("click" , vaiAvanti);
+
+    </script>
+    <script>
+        const cambiaColoreGiallo = (evt) => 
+        {
+            evt.target.style.backgroundColor = "yellow";
+        };
+        quadrato.addEventListener('mousemove' , cambiaColoreGiallo) ;
+        rettangolo.addEventListener('mousemove' , cambiaColoreGiallo) ;
+    </script>
+</body>
+</html>

@@ -8,20 +8,43 @@
 </head>
 <body>
     <script>
-
+        /*
         const externalVariable = 10;
 
-        function funzioneInterna(){
+        function funzioneInterna()
+        {
             const internalVariable = 20;
             console.log("Il Valore di fuori è " , externalVariable);
 
-            function InternalFunction(){
+            function InternalFunction()
+            {
                 console.log("il valore della variabile interna è " , internalVariable);
             }
             InternalFunction();
         }
 
-        funzioneInterna();
+        funzioneInterna();*/
+
+        //Spiegazione caratteristica di LET
+
+        const colors = ['red' ,'green' , 'blue' ];
+
+        for (var index = 0; index < colors.length; index++)
+        {
+            element = colors[index];
+        }
+        console.log(index , element);
+
+
+
+        const colors = ['red' ,'green' , 'blue' ];
+
+        for (let index = 0; index < colors.length; index++)
+        {
+            element = colors[index];
+        }
+        console.log(index , element);
+
     </script>
 </body>
 </html>
