@@ -7,13 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    <script type="module" src="class/CounterSpec.js"></script>
+    <script type="module" src="class/CounterElementSpec.js"></script>
 
-    <div class="counter">
-        <div class="name">Contatore</div>
-        <button class="btn-less">-</button>
-        <span class="display">0</span>
-        <button class="btn-add">+</button>
-    </div>
+    <div id="counterC" 
+        data-title="contatore C"
+        data-min="10"
+        data-max="20"
+        data-initial="15"
+    ></div>
+
+    <div id="counterD" ></div>
+
+
+    <div id="counterE"
+        data-title="contatore E"
+        data-min="-10"
+        /*data-max="20"*/
+        data-initial="0"
+    ></div>
+
+
+    <div id="counterF" 
+        data-title="contatore F"
+        /*data-min="-10"*/
+        data-max="10"
+        /*data-initial="15"*/
+    ></div>
+    
 </body>
 </html>
