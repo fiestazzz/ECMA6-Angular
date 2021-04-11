@@ -10,7 +10,7 @@ contatore = new Counter(10)
 contatore.increment()
 contatore.increment()
 
-console.log("02 - dopo 2 tocchi vale 12",contatore.value == 12);
+console.log("02 - dopo 2 tocchi vale 12",contatore.value == 12 ,contatore.value);
 
 /**
  * 1 arg partenza
@@ -73,7 +73,7 @@ console.log("9c - parametri passati come stringhe limite max e min decrement",co
 
 try {
     contatore = new Counter(10,11,12)
-    console.log("FAIL 10a Error - mi aspettavo un eccezione initial è minore di min",false)
+    console.log("FAIL 10a Error - mi aspettavo un eccezione initial è minore di min",false ,contatore.value)
 } catch (error) {
     console.log("PASS 10a Error - trovato un errore atteso 'initial è minore di min' ",error.message === 'initial è minore di min')
     //console.error(error)
