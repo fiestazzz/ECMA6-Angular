@@ -73,7 +73,8 @@ console.log("9c - parametri passati come stringhe limite max e min decrement",co
 
 try {
     contatore = new Counter(10,11,12)
-    console.log("FAIL 10a Error - mi aspettavo un eccezione initial è minore di min",false ,contatore.value)
+    console.log("FAIL 10a Error - mi aspettavo un eccezione initial è minore di min",false)
+    
 } catch (error) {
     console.log("PASS 10a Error - trovato un errore atteso 'initial è minore di min' ",error.message === 'initial è minore di min')
     //console.error(error)
@@ -81,25 +82,26 @@ try {
 
 try {
     contatore = new Counter("10","11","12")
-    console.log("FAIL 10b Error - mi aspettavo un eccezione 'initial è minore di min' ",false)
+    console.log("FAIL 10b Error - mi aspettavo un eccezione 'initial è minore di min' ",false )
 } catch (error) {
-    console.log("PASS 10b Error - trovato un errore atteso 'initial è minore di min' ",error.message === 'initial è minore di min')
+    console.log("PASS 10b Error - trovato un errore atteso 'initial è minore di min ",error.message === 'initial è minore di min')
     //console.error(error)
 }
 
 
 try {
     contatore = new Counter(13,11,12)
-    console.log("FAIL 10c Error - mi aspettavo un eccezione initial è maggiore di max",false)
+    console.log("FAIL 10c Error - mi aspettavo un eccezione initial è maggiore di max'",false )
 } catch (error) {
-    console.log("PASS 10c Error - trovato un errore era atteso 'errore initial maggiore di max'",error.message === 'initial è maggiore di max',)
+    console.log("PASS 10c Error - trovato un errore era atteso 'errore initial maggiore di max",error.message === 'initial è maggiore di max',)
     //console.error(error)
 }
 
 
 try {
     contatore = new Counter("13","11","12")
-    console.log("FAIL 10d Error - mi aspettavo un eccezione initial è maggiore di max",false)
+    console.log("FAIL 10d Error - mi aspettavo un eccezione initial è maggiore di max'",false)
+    
 } catch (error) {
     console.log("PASS 10d Error - trovato un errore era atteso 'errore initial maggiore di max'",error.message === 'initial è maggiore di max',)
     //console.error(error)
